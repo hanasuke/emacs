@@ -127,3 +127,26 @@
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
+
+;; ========================================
+;; Emmet
+;; ========================================
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+(setq emmet-move-cursor-between-quotes t)
+
+;; ========================================
+;; popwin
+;; ========================================
+(require 'popwin)
+(popwin-mode 1)
+
+;; ========================================
+;; ruby-mode
+;; ========================================
+(require 'ruby-block)
+(require 'ruby-tools)
+
+(defun ruby-mode-set-encoding () ())
