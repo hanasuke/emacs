@@ -14,12 +14,16 @@
 ;; setting
 ;; ========================================
 (custom-set-variables
-  '(inhibit-startup-screen t)
-  '(indent-tabs-mode nil)
-  '(menu-bar-mode nil)
-  '(delete-auto-save-files t)
-  '(make-backup-files nil)
-)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (tango)))
+ '(delete-auto-save-files t)
+ '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
+ '(make-backup-files nil)
+ '(menu-bar-mode nil))
 (setq desktop-globals-to-save '(extended-command-history))
 (setq desktop-files-not-to-save "")
 (desktop-save-mode 1)
@@ -97,10 +101,13 @@
 ;;--------------------
 
 (custom-set-faces
-  '(default ((t (:foreground "white" :background "black"))))
-  '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
-  '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box "nil"))))
-)
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:foreground "white" :background "black"))))
+ '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
+ '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box "nil")))))
 
 ;; ========================================
 ;; helm
