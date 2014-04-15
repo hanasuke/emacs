@@ -18,12 +18,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tango)))
- '(delete-auto-save-files t)
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(Delete-auto-save-files t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
- '(menu-bar-mode nil))
+ '(menu-bar-mode nil)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil)
+)
 (setq desktop-globals-to-save '(extended-command-history))
 (setq desktop-files-not-to-save "")
 (desktop-save-mode 1)
@@ -109,9 +112,9 @@
  '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
  '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box "nil")))))
 
-;; ========================================
+;;========================================
 ;; helm
-;; ========================================
+;;========================================
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 (helm-mode 1)
 ;; M-yでキルリングの履歴一覧を表示
@@ -126,9 +129,9 @@
 
 ;; find-file時 C-zでディレクトリ移動
 
-;; ========================================
+;;========================================
 ;; auto-complete
-;; ========================================
+;;========================================
 (require 'auto-complete)
 (global-auto-complete-mode t)
 (require 'auto-complete-config)
@@ -139,9 +142,9 @@
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
-;; ========================================
+;;========================================
 ;; Emmet
-;; ========================================
+;;========================================
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
@@ -149,23 +152,23 @@
 (setq emmet-move-cursor-between-quotes t)
 
 
-;; ========================================
+;;========================================
 ;; popwin
-;; ========================================
+;;========================================
 (require 'popwin)
 (popwin-mode 1)
 
-;; ========================================
+;;========================================
 ;; ruby-mode
-;; ========================================
+;;========================================
 (require 'ruby-block)
 (require 'ruby-tools)
 
 (defun ruby-mode-set-encoding () ())
 
-;; ========================================
+;;========================================
 ;; rainbow-delimiters
-;; ========================================
+;;========================================
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode t)
 (custom-set-faces '(rainbow-delimiters-depth-1-face ((t (:foreground "#7f8c8d")))))
