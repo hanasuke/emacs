@@ -2,7 +2,7 @@
 *~
 ac-comphist.dat
 .emacs.desktop
-.emacs.desctop.lock
+.emacs.desktop.lock
 elpa/archives/
 *projecttile-bookmarks.eld
 *.elc
