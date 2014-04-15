@@ -1,6 +1,6 @@
 .*.swp
 *~
-ac-comphst.dat
+ac-comphist.dat
 .emacs.desktop
 .emacs.desctop.lock
 elpa/archives/
