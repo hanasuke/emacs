@@ -58,6 +58,7 @@
 ;; ファイル名が重複した時に、バッファ名にディレクトリまで含める
 
 (global-linum-mode t) ; 行番号表示
+(setq linum-format "%4d| ")
 
 ;;(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-buffer-name-style 'forward)
