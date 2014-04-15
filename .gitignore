@@ -1,0 +1,8 @@
+.*.swp
+*~
+ac-comphst.dat
+.emacs.desktop
+.emacs.desctop.lock
+elpa/archives/
+*projecttile-bookmarks.eld
+*.elc
