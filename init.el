@@ -148,6 +148,7 @@
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
 (setq emmet-move-cursor-between-quotes t)
 
+
 ;; ========================================
 ;; popwin
 ;; ========================================
@@ -161,3 +162,10 @@
 (require 'ruby-tools)
 
 (defun ruby-mode-set-encoding () ())
+
+;; ========================================
+;; rainbow-delimiters
+;; ========================================
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode t)
+(custom-set-faces '(rainbow-delimiters-depth-1-face ((t (:foreground "#7f8c8d")))))
