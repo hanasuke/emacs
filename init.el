@@ -20,6 +20,10 @@
   '(delete-auto-save-files t)
   '(make-backup-files nil)
 )
+(setq desktop-globals-to-save '(extended-command-history))
+(setq desktop-files-not-to-save "")
+(desktop-save-mode 1)
+
 
 ;; 対応する括弧を強調
 (show-paren-mode t)
