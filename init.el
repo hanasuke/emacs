@@ -57,8 +57,8 @@
 (set-default-coding-systems 'utf-8)
 ;; ファイル名が重複した時に、バッファ名にディレクトリまで含める
 
-(global-linum-mode t) ; 行番号表示
-(setq linum-format "%4d| ")
+(global-linum-mode t)        ; 行番号表示
+(setq linum-format "%4d| ")  ; 行番号フォーマット
 
 ;;(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-buffer-name-style 'forward)
@@ -173,3 +173,9 @@
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode t)
 (custom-set-faces '(rainbow-delimiters-depth-1-face ((t (:foreground "#7f8c8d")))))
+
+;;========================================
+;; smartparens
+;;========================================
+(require 'smartparens-config)
+(smartparens-global-mode t)
