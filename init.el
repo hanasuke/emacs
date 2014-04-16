@@ -179,3 +179,35 @@
 ;;========================================
 (require 'smartparens-config)
 (smartparens-global-mode t)
+
+;;========================================
+;; twittering-mode
+;;========================================
+(require 'twittering-mode)
+(global-set-key "\C-ctw" 'twittering-mode)
+;; OAuth認証を使う
+(setq twittering-auth-method 'oauth)
+(setq twittering-use-master-password)
+;(load "~/.emacs.d/twitter_token")
+(setq twittering-icon-mode t) ; アイコン表示 : 有効
+(setq twittering-use-icon-storage t) ; アイコン保存 : 有効
+(setq twittering-convert-fix-size 24) ; アイコンサイズ: 24px
+(setq twittering-timer-interval 60) ; 更新間隔 : 60秒
+;; タイムラインのフォーマット
+(setq twittering-status-format
+  "%i %s %@ %C{%y/%m/%d %H:%M}\n%t\n// from %f %RT{retweeted by %s}\n")
+;; リツイートのフォーマット
+(setq twittering-retweet-format " RT @%s: %t")
+(defun twittering-mode-hook-func ()
+  ;; ユーザ名とリンクを太字にする
+  (set-face-bold-p 'twittering-username-face t)
+  ;; ユーザー名とリンクの色
+  (set-face-foreground 'twittering-username-face "DeepSkyBlue3")
+  ;; URLとタイムスタンプの色
+  (set-face-foreground 'twittering-uri-face "gray60")
+  ;; Shift+f でお気に入り登録
+  (define-key twittering-mode-map (kbd "F") 'twittering-favorite))
+(add-hook 'twittering-mode-hook 'twittering-mode-hook-func)
+;; 行番号表示を無効にする
+(defadvice linum-on (around for-twit activate)
+  (unless (memq major-mode '(twittering-mode twittering-edit-mode)) ad-do-it))
