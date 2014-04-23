@@ -6,3 +6,5 @@ ac-comphist.dat
 elpa/archives/
 *projecttile-bookmarks.eld
 *.elc
+tramp
+#*
