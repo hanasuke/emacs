@@ -34,6 +34,9 @@
 
 ;; 対応する括弧を強調
 (show-paren-mode t)
+;; 現在行をハイライト
+(setq hl-line-face 'underline)
+(global-hl-line-mode t)
 ;; 入力キー表示速度を早くする
 (setq echo-keystrokes 0.1)
 ;; ;; C-h をバックスペースに。
