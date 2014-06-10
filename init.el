@@ -41,6 +41,8 @@
 (setq echo-keystrokes 0.1)
 ;; ;; C-h をバックスペースに。
 (global-set-key "\C-h" 'backward-delete-char)
+;; C-/をundoに
+;(global-set-key "\C-/" 'undo)
 ;; 行末の空白を保存時に削除
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; ; タブ幅
@@ -69,6 +71,11 @@
 (setq desktop-globals-to-save '(extended-command-history))
 (setq desktop-files-not-to-save "")
 (desktop-save-mode 1)
+
+;; yes, no をy, nに
+(fset 'yes-or-no-p 'y-or-n-p)
+(define-key query-replace-map [return] 'act)
+
 ;;--------------------
 ;; タブ, 全角スペース, 行末空白表示
 ;;--------------------
