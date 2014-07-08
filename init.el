@@ -221,3 +221,12 @@
 ;; 行番号表示を無効にする
 (defadvice linum-on (around for-twit activate)
   (unless (memq major-mode '(twittering-mode twittering-edit-mode)) ad-do-it))
+
+;;========================================
+;; git-gutter
+;;========================================
+
+(global-git-gutter-mode t)
+(set-face-background 'git-gutter:modified "purple")
+(set-face-foreground 'git-gutter:added    "green")
+(set-face-foreground 'git-gutter:deleted  "red")
