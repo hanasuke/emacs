@@ -230,3 +230,13 @@
 (set-face-background 'git-gutter:modified "purple")
 (set-face-foreground 'git-gutter:added    "green")
 (set-face-foreground 'git-gutter:deleted  "red")
+
+;;========================================
+;; anzu
+;;========================================
+
+(global-anzu-mode t)
+(custom-set-variables
+ '(anzu-mode-lighter "")
+ '(anzu-deactive-region t)
+ '(anzu-search-threshold 1000))
