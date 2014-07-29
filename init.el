@@ -240,3 +240,9 @@
  '(anzu-mode-lighter "")
  '(anzu-deactive-region t)
  '(anzu-search-threshold 1000))
+
+;;========================================
+;; volatile-highlights
+;;========================================
+
+(volatile-highlights-mode t)
