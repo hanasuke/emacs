@@ -9,3 +9,4 @@ elpa/archives/
 *.elc
 tramp
 #*
+elisp/*
