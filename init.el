@@ -76,6 +76,12 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (define-key query-replace-map [return] 'act)
 
+;; aspell
+(setq-default ispell-program-name "aspell")
+(eval-after-load "ispell"
+  '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+(global-set-key (kbd "C-M-$") 'ispell-compre)
+
 ;;--------------------
 ;; タブ, 全角スペース, 行末空白表示
 ;;--------------------
