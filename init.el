@@ -261,3 +261,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/elisp")
 (require 'oniisama)
+
+;;========================================
+;; ace-isearch
+;;========================================
+
+(global-ace-isearch-mode 1)
