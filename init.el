@@ -267,3 +267,14 @@
 ;;========================================
 
 (global-ace-isearch-mode 1)
+
+;;========================================
+;; eclim
+;;========================================
+
+(require 'eclim)
+(require 'eclimd)
+(add-hook 'java-mode-hook 'eclim-mode)
+;; auto-complete
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
