@@ -269,12 +269,8 @@
 (global-ace-isearch-mode 1)
 
 ;;========================================
-;; eclim
+;; java
 ;;========================================
-
-(require 'eclim)
-(require 'eclimd)
-(add-hook 'java-mode-hook 'eclim-mode)
-;; auto-complete
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+(add-hook 'java-mode-hook (lambda ()
+                            (setq c-basic-offset 2
+                                  tab-width 2)))
