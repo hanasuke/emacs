@@ -274,3 +274,14 @@
 (add-hook 'java-mode-hook (lambda ()
                             (setq c-basic-offset 2
                                   tab-width 2)))
+
+;;========================================
+;; golang
+;;========================================
+
+(require 'go-mode-autoloads)
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-to-list 'exec-path (expand-file-name "/usr/local/go/bin"))
+(add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
+(add-hook 'go-mode-hook (lambda()
+                          (local-set-key (kbd "M-.") 'godef-jump)))
