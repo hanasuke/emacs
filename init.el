@@ -290,9 +290,3 @@
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-hook 'go-mode-hook (lambda()
                           (local-set-key (kbd "M-.") 'godef-jump)))
-
-;;========================================
-;; flycheck
-;;========================================
-
-(add-hook 'after-init-hook #'global-flycheck-mode)
