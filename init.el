@@ -274,3 +274,9 @@
 (add-hook 'java-mode-hook (lambda ()
                             (setq c-basic-offset 2
                                   tab-width 2)))
+
+;;========================================
+;; C/C++
+;;========================================
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
