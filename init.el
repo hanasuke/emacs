@@ -290,6 +290,28 @@
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-hook 'go-mode-hook (lambda()
                           (local-set-key (kbd "M-.") 'godef-jump)))
+
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
+
+;;========================================
+;; C/C++
+;;========================================
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+
+;;========================================
+;; Google translte
+;;========================================
+
+(require 'google-translate)
+
+(global-set-key "\C-xt" 'google-translate-at-point)
+(global-set-key "\C-xT" 'google-translate-query-translate)
+
+(custom-set-variables
+ '(google-translate-default-source-language "ja")
+ '(google-translate-default-target-language "en"))
+
+(push '("*Google Translate*") popwin:special-display-config)
