@@ -188,6 +188,16 @@
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
+;;----------------------------------------
+;; projectile-rails
+;;----------------------------------------
+
+(require 'projectile)
+(projectile-global-mode)
+
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+
 ;;========================================
 ;; rainbow-delimiters
 ;;========================================
