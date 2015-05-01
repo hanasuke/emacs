@@ -3,6 +3,11 @@
 ;; package.el
 ;; ========================================
 (require 'package)
+;; color-theme
+(add-to-list 'load-path "~/.emacs.d/color-theme")
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-molokai)
 ;; MELPAを追加
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ;; ;; Marmaladeを追加
