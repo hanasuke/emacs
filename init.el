@@ -183,6 +183,16 @@
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
+;;----------------------------------------
+;; projectile-rails
+;;----------------------------------------
+
+(require 'projectile)
+(projectile-global-mode)
+
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+
 ;;========================================
 ;; rainbow-delimiters
 ;;========================================
@@ -285,6 +295,15 @@
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
 (add-hook 'go-mode-hook (lambda()
                           (local-set-key (kbd "M-.") 'godef-jump)))
+(add-hook 'go-mode-hook
+          '(lambda()
+             (setq tab-width 2)
+             (setq indent-tabs-mode nil)
+             ))
+; go autocomplete-mode
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;;========================================
 ;; C/C++
