@@ -1,0 +1,1 @@
+("~/dotfiles/emacs.d/" "~/Develop/Aqutras/iid-playtoys-sugotoku/")

@@ -270,14 +270,6 @@
 (volatile-highlights-mode t)
 
 ;;========================================
-;; oniisama
-;; https://github.com/yu-i9/oniisama
-;;========================================
-
-(add-to-list 'load-path "~/.emacs.d/elisp")
-(require 'oniisama)
-
-;;========================================
 ;; ace-isearch
 ;;========================================
 
