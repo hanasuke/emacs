@@ -7,8 +7,8 @@
   (color-theme-install
    '(color-theme-molokai ;; カラーテーマ名
      ;; 背景・文字・カーソル
-     ((background-color . "#1B1D1E")
-      (background-mode . dark)
+     (;;(background-color . "#1B1D1E")
+      ;;(background-mode . dark)
       (foreground-color . "#F8F8F2")
       (cursor-color . "#F8F8F0"))
 
