@@ -83,6 +83,9 @@
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 (global-set-key (kbd "C-M-$") 'ispell-compre)
 
+;; comment or uncomment region
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
+
 ;;--------------------
 ;; タブ, 全角スペース, 行末空白表示
 ;;--------------------
