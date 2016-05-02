@@ -23,15 +23,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;;'(custom-enabled-themes (quote (tango-dark)))
  '(Delete-auto-save-files t)
+ '(anzu-deactive-region t)
+ '(anzu-mode-lighter "")
+ '(anzu-search-threshold 1000)
+ '(global-wakatime-mode t)
+ '(google-translate-default-source-language "ja")
+ '(google-translate-default-target-language "en")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
-)
+ '(wakatime-api-key "c6bf16e1-01c2-40c6-8e2b-cf212cdc3bef"))
 
 ;; 対応する括弧を強調
 (show-paren-mode t)
@@ -130,7 +135,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
- '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box "nil")))))
+ '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box "nil"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#7f8c8d")))))
 
 ;;========================================
 ;; helm
@@ -206,7 +212,7 @@
 ;;========================================
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode t)
-(custom-set-faces '(rainbow-delimiters-depth-1-face ((t (:foreground "#7f8c8d")))))
+
 
 ;;========================================
 ;; smartparens
@@ -260,10 +266,7 @@
 ;;========================================
 
 (global-anzu-mode t)
-(custom-set-variables
- '(anzu-mode-lighter "")
- '(anzu-deactive-region t)
- '(anzu-search-threshold 1000))
+
 
 ;;========================================
 ;; volatile-highlights
@@ -331,8 +334,8 @@
 (global-set-key "\C-xt" 'google-translate-at-point)
 (global-set-key "\C-xT" 'google-translate-query-translate)
 
-(custom-set-variables
- '(google-translate-default-source-language "ja")
- '(google-translate-default-target-language "en"))
+
 
 (push '("*Google Translate*") popwin:special-display-config)
+
+(global-wakatime-mode t)
