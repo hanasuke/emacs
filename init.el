@@ -349,7 +349,7 @@
 ;;========================================
 
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.jsx\\" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
 (defun web-mode-hook ()
   "Hooks for Web mode."
