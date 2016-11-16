@@ -1,19 +1,12 @@
-(require 'cl) ;; これがないと何故かうまく動かない
-;; ========================================
-;; package.el
-;; ========================================
-(require 'package)
+(add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
+(require 'cask)
+(cask-initialize)
+
 ;; color-theme
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-molokai)
-;; MELPAを追加
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-;; ;; Marmaladeを追加
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-;; 初期化
-(package-initialize)
 
 ;; ========================================
 ;; setting
@@ -34,6 +27,9 @@
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(package-selected-packages
+   (quote
+    (yasnippet web-mode wakatime-mode volatile-highlights twittering-mode swift-mode smartparens slim-mode scss-mode scala-mode2 sass-mode ruby-tools ruby-block rhtml-mode rainbow-delimiters projectile-rails popwin php-mode markdown-mode lexbind-mode jsx-mode highlight-indentation helm-descbinds haskell-mode google-translate google-c-style go-mode go-autocomplete gitignore-mode git-gutter flycheck flex-autopair emacs-eclim crappy-jsp-mode coffee-mode anzu ace-isearch ac-js2 ac-inf-ruby ac-emmet)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(wakatime-api-key "c6bf16e1-01c2-40c6-8e2b-cf212cdc3bef"))
@@ -141,8 +137,9 @@
 ;;========================================
 ;; helm
 ;;========================================
+(require 'helm-config)
 (global-set-key (kbd "C-x C-b") 'helm-mini)
-(helm-mode 1)
+(helm-mode t)
 ;; M-yでキルリングの履歴一覧を表示
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 ;; helm modeでもC-hで1文字削除
@@ -210,13 +207,15 @@
 ;;========================================
 ;; rainbow-delimiters
 ;;========================================
+
 (require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode t)
+(rainbow-delimiters-mode t)
 
 
 ;;========================================
 ;; smartparens
 ;;========================================
+
 (require 'smartparens-config)
 (smartparens-global-mode t)
 
@@ -234,7 +233,6 @@
 ;;========================================
 
 (global-anzu-mode t)
-
 
 ;;========================================
 ;; volatile-highlights
@@ -271,7 +269,7 @@
 ;; golang
 ;;========================================
 
-(require 'go-mode-autoloads)
+(require 'go-mode)
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-to-list 'exec-path (expand-file-name "/usr/local/go/bin"))
 (add-to-list 'exec-path (expand-file-name "~/lib/go/bin"))
