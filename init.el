@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
 (require 'cask)
 (cask-initialize)
@@ -27,9 +34,6 @@
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(package-selected-packages
-   (quote
-    (yasnippet web-mode wakatime-mode volatile-highlights twittering-mode swift-mode smartparens slim-mode scss-mode scala-mode2 sass-mode ruby-tools ruby-block rhtml-mode rainbow-delimiters projectile-rails popwin php-mode markdown-mode lexbind-mode jsx-mode highlight-indentation helm-descbinds haskell-mode google-translate google-c-style go-mode go-autocomplete gitignore-mode git-gutter flycheck flex-autopair emacs-eclim crappy-jsp-mode coffee-mode anzu ace-isearch ac-js2 ac-inf-ruby ac-emmet)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(wakatime-api-key "c6bf16e1-01c2-40c6-8e2b-cf212cdc3bef"))
@@ -193,16 +197,6 @@
 (add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-
-;;----------------------------------------
-;; projectile-rails
-;;----------------------------------------
-
-(require 'projectile)
-(projectile-global-mode)
-
-(require 'projectile-rails)
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;;========================================
 ;; rainbow-delimiters
