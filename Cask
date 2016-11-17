@@ -64,6 +64,10 @@
 (depends-on "scala-mode")
 (depends-on "swift-mode")
 
+;; useful
+
+(depends-on "rainbow-mode")
+
 ;; syntax
 (depends-on "flycheck")
 (depends-on "google-c-style")
