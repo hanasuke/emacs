@@ -1,6 +1,7 @@
 ;; 変数定義
 (custom-set-variables
  '(delete-auto-save-files t)
+ '(auto-save-default nil)
  '(anzu-deactive-region t)
  '(anzu-mode-lighter "")
  '(anzu-search-threshold 1000)
