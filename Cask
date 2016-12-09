@@ -63,6 +63,7 @@
 (depends-on "emmet-mode")
 (depends-on "scala-mode")
 (depends-on "swift-mode")
+(depends-on "dockerfile-mode")
 
 ;; useful
 
