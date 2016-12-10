@@ -8,7 +8,12 @@
 (package-initialize)
 
 (add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
-(require 'cask)
+;; system-typeによってCaskの呼出し先を変更
+(cond ((eq system-type 'gnu/linux)
+       (require 'cask "~/.cask/cask.el") ;; linuxのとき
+       )
+      ((eq system-type 'darwin)
+       (require 'cask)))  ;; macOSのとき
 (cask-initialize)
 
 ;; init-loaderの呼び出し
