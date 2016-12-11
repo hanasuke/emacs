@@ -22,14 +22,8 @@
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits/")
 
-;; color-theme
-(add-to-list 'load-path "~/.emacs.d/color-theme")
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-molokai)
-
 ;;========================================
-;; git-gutter
+;; Git-gutter
 ;;========================================
 
 (global-git-gutter-mode t)
