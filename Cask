@@ -65,6 +65,9 @@
 (depends-on "swift-mode")
 (depends-on "dockerfile-mode")
 
+(depends-on "yaml-mode")
+(depends-on "ansible")
+
 ;; useful
 
 (depends-on "rainbow-mode")
