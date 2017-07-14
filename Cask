@@ -49,6 +49,7 @@
 (depends-on "rhtml-mode")
 (depends-on "haml-mode")
 (depends-on "coffee-mode")
+(depends-on "projectile-rails")
 
 ; others
 (depends-on "go-mode")
@@ -67,6 +68,8 @@
 
 (depends-on "yaml-mode")
 (depends-on "ansible")
+
+(depends-on "quickrun")
 
 ;; useful
 
