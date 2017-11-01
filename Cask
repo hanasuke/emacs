@@ -50,6 +50,8 @@
 (depends-on "haml-mode")
 (depends-on "coffee-mode")
 (depends-on "projectile-rails")
+(depends-on "minitest")
+(depends-on "rspec-mode")
 
 ; others
 (depends-on "go-mode")
