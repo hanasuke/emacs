@@ -56,6 +56,9 @@
 ;; comment or uncomment region
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
 
+;; auto revert-buffer
+(global-auto-revert-mode t)
+
 
 ;;========================================
 ;; wakatime
