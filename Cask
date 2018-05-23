@@ -49,6 +49,7 @@
 (depends-on "rhtml-mode")
 (depends-on "haml-mode")
 (depends-on "coffee-mode")
+(depends-on "vue-mode")
 (depends-on "projectile-rails")
 
 ; others
