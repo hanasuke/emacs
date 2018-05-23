@@ -51,6 +51,8 @@
 (depends-on "coffee-mode")
 (depends-on "vue-mode")
 (depends-on "projectile-rails")
+(depends-on "minitest")
+(depends-on "rspec-mode")
 
 ; others
 (depends-on "go-mode")
