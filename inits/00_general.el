@@ -34,9 +34,6 @@
 (set-buffer-file-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 
-(global-linum-mode t)        ; 行番号表示
-(setq linum-format "%4d| ")  ; 行番号フォーマット
-
 (setq uniquify-buffer-name-style 'forward)
 ;; コマンド履歴の保存
 (setq desktop-globals-to-save '(extended-command-history))

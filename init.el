@@ -1,6 +1,5 @@
 ;; caskの初期化
 
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -22,6 +21,11 @@
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits/")
 
+;; call line-number
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode "relative")
+  (global-linum-mode t))
+
 ;;========================================
 ;; Tramp
 ;;========================================
@@ -34,10 +38,11 @@
 ;;========================================
 
 (global-git-gutter-mode t)
-(set-face-background 'git-gutter:modified "purple")
 (set-face-foreground 'git-gutter:added    "green")
 (set-face-foreground 'git-gutter:deleted  "red")
 
+(unless (version<= "26.0.50" emacs-version)
+    (git-gutter:linum-setup))
 
 ;;========================================
 ;; ace-isearch
