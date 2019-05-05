@@ -15,6 +15,7 @@
 ;;; general packages
 (depends-on "ace-isearch")
 (depends-on "ace-jump-mode")
+(depends-on "all-the-icons")
 (depends-on "anzu")
 (depends-on "cl-lib")
 (depends-on "crappy-jsp-mode")
@@ -27,6 +28,7 @@
 (depends-on "google-translate")
 (depends-on "highlight-indentation")
 (depends-on "inflections")
+(depends-on "neotree")
 (depends-on "pkg-info")
 (depends-on "popup")
 (depends-on "popwin")
