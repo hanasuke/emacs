@@ -26,7 +26,7 @@
 (depends-on "flex-autopair")
 (depends-on "git-gutter")
 (depends-on "google-translate")
-(depends-on "highlight-indentation")
+(depends-on "highlight-indent-guides")
 (depends-on "inflections")
 (depends-on "neotree")
 (depends-on "pkg-info")

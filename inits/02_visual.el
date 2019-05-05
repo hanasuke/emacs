@@ -95,6 +95,18 @@
 (global-anzu-mode t)
 
 ;;========================================
+;; highright indent guide
+;;========================================
+
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-method 'fill)
+(set-face-background 'highlight-indent-guides-odd-face "color-234")
+(set-face-background 'highlight-indent-guides-even-face "color-235")
+
+(add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+
+;;========================================
 ;; volatile-highlights
 ;;========================================
 
@@ -105,10 +117,11 @@
 ;; rainbow-delimiters
 ;;========================================
 
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'cl-lib)
 (require 'color)
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 (cl-loop
  for index from 1 to rainbow-delimiters-max-face-count
  do
