@@ -95,6 +95,14 @@
 (global-anzu-mode t)
 
 ;;========================================
+;; beacon
+;;========================================
+(setq beacon-color "color-129")
+(setq beacon-blink-duration 0.1)
+(setq beacon-blink-delay 0.3)
+(beacon-mode t)
+
+;;========================================
 ;; highright indent guide
 ;;========================================
 

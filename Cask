@@ -17,6 +17,7 @@
 (depends-on "ace-jump-mode")
 (depends-on "all-the-icons")
 (depends-on "anzu")
+(depends-on "beacon")
 (depends-on "cl-lib")
 (depends-on "crappy-jsp-mode")
 (depends-on "dash")
