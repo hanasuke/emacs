@@ -1,6 +1,7 @@
 ;;========================================
 ;; ruby-mode
 ;;========================================
+(require 'ruby-mode)
 (require 'ruby-block)
 (require 'ruby-tools)
 
@@ -12,6 +13,9 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
 (projectile-rails-global-mode t)
+
+;; this is for ruby mode
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;;========================================
 ;; rspec-mode
