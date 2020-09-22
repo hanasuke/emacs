@@ -12,6 +12,11 @@
 (depends-on "helm-descbinds")
 (depends-on "helm-swoop")
 
+;; install counsel
+(depends-on "ivy")
+(depends-on "swiper")
+(depends-on "counsel")
+
 ;;; general packages
 (depends-on "ace-isearch")
 (depends-on "ace-jump-mode")
