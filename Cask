@@ -37,7 +37,6 @@
 (depends-on "skewer-mode")
 (depends-on "smartparens")
 (depends-on "volatile-highlights")
-(depends-on "wakatime-mode")
 
 ;;; development
 ;; language modes
