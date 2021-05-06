@@ -12,11 +12,13 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(warning-suppress-types '((comp) (comp) (comp) (comp) (comp) (comp) (comp))))
 
 ;; 対応する括弧を強調
 (show-paren-mode t)
 
+(desctop-save-mode nil)
 ;; 現在行をハイライト
 (setq hl-line-face 'underline)
 (global-hl-line-mode t)
