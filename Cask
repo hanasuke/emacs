@@ -41,6 +41,7 @@
 (depends-on "skewer-mode")
 (depends-on "smartparens")
 (depends-on "volatile-highlights")
+(depends-on "git-modes")
 
 ;;; development
 ;; language modes
@@ -75,7 +76,6 @@
 (depends-on "php-mode")
 (depends-on "js2-mode")
 ;;(depends-on "jsx-mode")
-(depends-on "gitignore-mode")
 (depends-on "emmet-mode")
 (depends-on "scala-mode")
 (depends-on "swift-mode")
