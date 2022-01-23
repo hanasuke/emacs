@@ -61,3 +61,6 @@
 
 ;; use direnv
 (direnv-mode)
+
+;; use language server
+(require 'eglet)

@@ -44,6 +44,8 @@
 
 ;;; development
 ;; language modes
+; language server
+(depends-on "eglot")
 ; ruby & ruby on rails
 (depends-on "ruby-mode")
 (depends-on "inf-ruby")
@@ -78,6 +80,8 @@
 (depends-on "scala-mode")
 (depends-on "swift-mode")
 (depends-on "dockerfile-mode")
+(depends-on "python-mode")
+(depends-on "py-isort")
 
 (depends-on "yaml-mode")
 (depends-on "ansible")
