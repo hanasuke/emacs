@@ -1,3 +1,4 @@
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
 (setq warning-suppress-log-types '((package reinitialization)))
 (setq byte-compile-warnings '(cl-functions))
@@ -7,7 +8,7 @@
        )
       ((eq system-type 'darwin)
        (require 'cask)))  ;; macOSのとき
-(cask-initialize)
+(cask--initialize)
 
 ;; init-loaderの呼び出し
 
