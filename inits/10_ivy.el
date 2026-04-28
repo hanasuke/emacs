@@ -1,15 +1,12 @@
-(when (require 'ivy nil t)
-
-  ;; M-o を ivy-hydra-read-action に割り当てる．
-  (when (require 'ivy-hydra nil t)
-    (setq ivy-read-action-function #'ivy-hydra-read-action))
-
+(use-package ivy
+  :demand t
+  :config
   ;; `ivy-switch-buffer' (C-x b) のリストに recent files と bookmark を含める．
   (setq ivy-use-virtual-buffers t)
 
   ;; ミニバッファでコマンド発行を認める
-  (when (setq enable-recursive-minibuffers t)
-    (minibuffer-depth-indicate-mode 1)) ;; 何回層入ったかプロンプトに表示．
+  (setq enable-recursive-minibuffers t)
+  (minibuffer-depth-indicate-mode 1) ;; 何回層入ったかプロンプトに表示．
 
   ;; ESC連打でミニバッファを閉じる
   (define-key ivy-minibuffer-map (kbd "<escape>") 'minibuffer-keyboard-quit)
@@ -22,14 +19,15 @@
 
   (ivy-mode 1))
 
-(when (require 'counsel nil t)
+(use-package counsel
+  :demand t
+  :bind (("M-x" . counsel-M-x)
+         ("M-y" . counsel-yank-pop)
+         ("C-M-z" . counsel-fzf)
+         ("C-M-r" . counsel-recentf)
+         ("C-x C-b" . counsel-ibuffer)
+         ("C-M-f" . counsel-ag))
+  :config
+  (counsel-mode 1))
 
-  (global-set-key (kbd "M-x") 'counsel-M-x)
-  (global-set-key (kbd "M-y") 'counsel-yank-pop)
-  (global-set-key (kbd "C-M-z") 'counsel-fzf)
-  (global-set-key (kbd "C-M-r") 'counsel-recentf)
-  (global-set-key (kbd "C-x C-b") 'counsel-ibuffer)
-  (global-set-key (kbd "C-M-f") 'counsel-ag)
-
-  ;; アクティベート
-    (counsel-mode 1))
+(use-package swiper)

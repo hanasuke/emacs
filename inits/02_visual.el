@@ -92,26 +92,30 @@
 ;; anzu
 ;;========================================
 
-(global-anzu-mode t)
+(use-package anzu
+  :demand t
+  :config
+  (global-anzu-mode t))
 
 ;;========================================
 ;; highright indent guide
 ;;========================================
 
-(require 'highlight-indent-guides)
-(setq highlight-indent-guides-method 'fill)
-(set-face-background 'highlight-indent-guides-odd-face "color-234")
-(set-face-background 'highlight-indent-guides-even-face "color-235")
-
-(add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
-(add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+(use-package highlight-indent-guides
+  :config
+  (setq highlight-indent-guides-method 'fill)
+  (set-face-background 'highlight-indent-guides-odd-face "color-234")
+  (set-face-background 'highlight-indent-guides-even-face "color-235")
+  (add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
+  (add-hook 'python-mode-hook 'highlight-indent-guides-mode))
 
 ;;========================================
 ;; volatile-highlights
 ;;========================================
 
-(require 'volatile-highlights)
-(volatile-highlights-mode t)
+(use-package volatile-highlights
+  :config
+  (volatile-highlights-mode t))
 
 ;;========================================
 ;; rainbow-delimiters
@@ -119,14 +123,15 @@
 
 (require 'cl-lib)
 (require 'color)
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-(cl-loop
- for index from 1 to rainbow-delimiters-max-face-count
- do
- (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
-   (cl-callf color-saturate-name (face-foreground face) 30)))
+(use-package rainbow-delimiters
+  :demand t
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  (cl-loop
+   for index from 1 to rainbow-delimiters-max-face-count
+   do
+   (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
+     (set-face-foreground face (color-saturate-name (face-foreground face) 30)))))
 
 ;;========================================
 ;; rainbow-mode
@@ -145,5 +150,7 @@
 ;; smartparens
 ;;========================================
 
-(require 'smartparens-config)
-(smartparens-global-mode t)
+(use-package smartparens
+  :config
+  (require 'smartparens-config)
+  (smartparens-global-mode t))

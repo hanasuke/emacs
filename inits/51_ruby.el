@@ -1,9 +1,10 @@
 ;;========================================
 ;; ruby-mode
 ;;========================================
-(require 'ruby-mode)
-(require 'ruby-block)
-(require 'ruby-tools)
+(use-package ruby-tools)
+(use-package projectile-rails
+  :config
+  (projectile-rails-global-mode t))
 
 (defun ruby-mode-set-encoding () ())
 (autoload 'ruby-mode "ruby-mode"
@@ -12,8 +13,6 @@
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
-(projectile-rails-global-mode t)
-
 ;; this is for ruby mode
 (setq ruby-insert-encoding-magic-comment nil)
 
@@ -21,17 +20,17 @@
 ;; rspec-mode
 ;;========================================
 
-(require 'rspec-mode)
-
-(eval-after-load 'rspec-mode
- '(rspec-install-snippets))
+(use-package rspec-mode
+  :config
+  (eval-after-load 'rspec-mode
+    '(rspec-install-snippets)))
 
 ;;========================================
 ;; minitest-mode
 ;;========================================
 
-(require 'minitest-mode)
-
-(add-hook 'ruby-mode-hook 'minitest-mode)
-(eval-after-load 'minitest
-  '(minitest-install-snippets))
+(use-package minitest
+  :config
+  (add-hook 'ruby-mode-hook 'minitest-mode)
+  (eval-after-load 'minitest
+    '(minitest-install-snippets)))

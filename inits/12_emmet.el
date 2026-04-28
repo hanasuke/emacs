@@ -1,8 +1,9 @@
 ;;========================================
 ;; Emmet
 ;;========================================
-(require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook 'emmet-mode)
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
-(setq emmet-move-cursor-between-quotes t)
+(use-package emmet-mode
+  :hook ((sgml-mode . emmet-mode)
+         (css-mode . emmet-mode)
+         (emmet-mode . (lambda () (setq emmet-indentation 2))))
+  :config
+  (setq emmet-move-cursor-between-quotes t))

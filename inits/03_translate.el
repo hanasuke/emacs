@@ -8,9 +8,6 @@
 ;; Google translte
 ;;========================================
 
-(require 'google-translate)
-
-(global-set-key "\C-xt" 'google-translate-at-point)
-(global-set-key "\C-xT" 'google-translate-query-translate)
-
-(push '("*Google Translate*") popwin:special-display-config)
+(use-package google-translate
+  :bind (("C-x t" . google-translate-at-point)
+         ("C-x T" . google-translate-query-translate)))
